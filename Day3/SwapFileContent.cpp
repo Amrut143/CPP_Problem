@@ -59,7 +59,8 @@ void swapContent() {
    }
 }
 
-int main() {
+void writeToFile() {
+
    fstream firstFile, secondFile;
 
    firstFile.open("file1.txt", ios::out);
@@ -77,6 +78,11 @@ int main() {
          secondFile << "This is Java file" << endl;
          secondFile.close();
    }
+}
+
+int main() {
+
+   writeToFile();
    swapContent();
    return 0;
 }
