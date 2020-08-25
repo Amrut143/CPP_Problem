@@ -8,6 +8,7 @@ int main () {
 
 	int arr[10]= {11, 9, 7, 22, 23, 44, 55, 78, 33, 88};
 	int i;
+
 	mergeSort(arr, 0, 9);
 	cout << "After sorting the elements" << endl;
 	for(i = 0; i < 10; i++) {
@@ -21,7 +22,7 @@ void mergeSort(int arr[], int beg, int end) {
 	if(beg < end) {
 		mid = (beg + end) / 2;
 		mergeSort(arr, beg, mid);
-		mergeSort(arr, mid+1, end);
+		mergeSort(arr, mid + 1, end);
 		merge(arr, beg, mid, end);
 	}
 }

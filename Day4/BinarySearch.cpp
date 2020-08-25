@@ -4,16 +4,16 @@ using namespace std;
 int binarySearch(int arr[], int beg, int end, int num) {
 
 	if (beg <= end) {
-		int mid = (beg + end)/2;
+		int mid = (beg + end) / 2;
 
 		if(arr[mid] == num) {
 			return mid;
 		}
 		else if(arr[mid] < num) {
-			return binarySearch(arr, mid+1, end, num);
+			return binarySearch(arr, mid + 1, end, num);
 		}
 		else {
-			return binarySearch(arr, beg, mid-1, num);
+			return binarySearch(arr, beg, mid - 1, num);
 		}
    }
 	return -1;

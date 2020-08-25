@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 using namespace std;
 
 void insertionSort(int [], int);
@@ -10,7 +11,7 @@ int main() {
 	insertionSort(arr, 9);
 	cout << "After sorting the elements: " << endl;
 	for(int i = 0; i<=8; i++)
-			cout << arr[i] << endl;
+		cout << arr[i] << endl;
 }
 
 void insertionSort(int arr[], int numOfElements) {
@@ -19,9 +20,9 @@ void insertionSort(int arr[], int numOfElements) {
 
 	for(i = 1; i < numOfElements; i++) {
 			temp = arr[i];
-			for(j = i-1; j >= 0 && temp < arr[j]; j--) {
-					arr[j+1] = arr[j];
+			for(j = i - 1; j >= 0 && temp < arr[j]; j--) {
+				arr[j + 1] = arr[j];
 			}
-			arr[j+1] = temp;
+			arr[j + 1] = temp;
 	}
 }
